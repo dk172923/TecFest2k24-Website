@@ -2,7 +2,6 @@
 
 /* Google Fonts(Poppins) */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Protest+Revolution&display=swap');
 
@@ -388,61 +387,6 @@ html::-webkit-scrollbar-thumb {
 }
 
 
-.theme-toggler {
-  position: fixed;
-  top: 10rem;
-  right: -20rem;
-  background: #333;
-  z-index: 1000;
-  width: 20rem;
-  text-align: center;
-}
-
-.theme-toggler.active {
-  right: 0;
-}
-
-.theme-toggler h3 {
-  color: #fff;
-  padding: 1rem 0;
-  font-size: 2rem;
-}
-
-.theme-toggler .buttons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.theme-toggler .buttons .theme-btn {
-  height: 5rem;
-  width: 5rem;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.theme-toggler .toggle-btn {
-  position: absolute;
-  top: 0;
-  left: -5.9rem;
-  padding: 1.3rem 1.5rem;
-  background: #333;
-  cursor: pointer;
-}
-
-.theme-toggler .toggle-btn i {
-  color: #fff;
-  font-size: 3rem;
-  animation: spin 4s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(360deg);
-  }
-}
 
 /* media queries  */
 
@@ -497,7 +441,7 @@ html::-webkit-scrollbar-thumb {
   }
 
   iframe{
-    width: min-content;
+    width: 100%;
   }
 
   .home .image{
@@ -542,7 +486,14 @@ html::-webkit-scrollbar-thumb {
 
 
 
+.location-heading{
+  text-align: center;
+}
+
 .location{
+  margin: 0 auto 10px;
+  text-align: center;
+  max-width: 100%;
   background-color: #333;
   width: fit-content;
   border-radius: 0.5rem;
@@ -571,7 +522,7 @@ iframe{
   display: flex; /* Use flexbox to align items */
   justify-content: center; /* Center the content horizontally */
   align-items: center; /* Center the content vertically */
-  background-image: url(./images/after\ enhance\ crop.png);
+  background-image: url("./images/hero-wide.webp");
   margin-top: 60px;
   background-repeat: no-repeat;
   background-size:cover;
@@ -651,7 +602,7 @@ iframe{
     display: flex; /* Use flexbox to align items */
     justify-content: center; /* Center the content horizontally */
     align-items: center; /* Center the content vertically */
-    background-image: url(./images/after\ enhance\ .png);
+    background-image: url("./images/hero.webp");
     background-repeat: no-repeat;
     background-size:contain;
   }
@@ -660,3 +611,24 @@ iframe{
 }
 
 
+
+/* Keep emails readable (the global rule capitalises every word) */
+a[href^="mailto:"],
+.email-link {
+  text-transform: none;
+}
+
+/* Countdown finished message */
+.countdown-ended {
+  font-size: 2.2rem;
+  color: #eee;
+  padding: 1rem;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+iframe {
+  max-width: 100%;
+}
