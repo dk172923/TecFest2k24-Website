@@ -70,10 +70,6 @@ body {
     margin-top: 10px;
 }
 
-.coordinators a {
-    color: #007bff;
-    text-decoration: none;
-}
 
 .whatsapp-group {
     margin-top: 20px;
@@ -118,3 +114,12 @@ body {
     background-color: darkgreen;
 }
 
+
+.coordinators a,
+.rules a {
+    color: var(--theme-color);
+}
+
+.email-link {
+    color: var(--theme-color);
+}

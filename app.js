@@ -1,109 +1,50 @@
-/* Created by Tivotal */
+// Mobile navigation menu
+const menu = document.querySelector("#menu-bars");
+const navbar = document.querySelector(".navbar");
 
-let menu = document.querySelector("#menu-bars");
-let navbar = document.querySelector(".navbar");
+if (menu && navbar) {
+  menu.addEventListener("click", () => {
+    menu.classList.toggle("fa-times");
+    navbar.classList.toggle("active");
+  });
 
-menu.onclick = () => {
-  menu.classList.toggle("fa-times");
-  navbar.classList.toggle("active");
-};
-
-/*let themeToggler = document.querySelector(".theme-toggler");
-let toggleBtn = document.querySelector(".toggle-btn");
-
-toggleBtn.onclick = () => {
-  themeToggler.classList.toggle("active");
-};*/
-
-window.onscroll = () => {
-  menu.classList.remove("fa-times");
-  navbar.classList.remove("active");
-  //themeToggler.classList.remove("active");
-};
-
-/*document.querySelectorAll(".theme-toggler .theme-btn").forEach((btn) => {
-  btn.onclick = () => {
-    let color = btn.style.background;
-    document.querySelector(":root").style.setProperty("--theme-color", color);
-  };
-});*/
-
-var swiper = new Swiper(".home-slider", {
-  effect: "coverflow",
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: "auto",
-  coverflowEffect: {
-    rotate: 0,
-    stretch: 0,
-    depth: 100,
-    modifier: 2,
-    slideShadows: true,
-  },
-  loop: true,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
-});
-
-var swiper = new Swiper(".review-slider", {
-  slidesPerView: 1,
-  grabCursor: true,
-  loop: true,
-  spaceBetween: 10,
-  breakpoints: {
-    0: {
-      slidesPerView: 1,
-    },
-    700: {
-      slidesPerView: 2,
-    },
-    1050: {
-      slidesPerView: 3,
-    },
-  },
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
-});
-
-const days = document.getElementById('days');
-const hours = document.getElementById('hours');
-const minutes = document.getElementById('minutes');
-const seconds = document.getElementById('seconds');
-
-const currentYear = new Date().getFullYear();
-
-const newYearTime = new Date(`March 26 ${currentYear + 0} 00:00:00`);
-
-// Update countdown time
-function updateCountdown() {
-	const currentTime = new Date();
-	const diff = newYearTime - currentTime;
-
-	const d = Math.floor(diff / 1000 / 60 / 60 / 24);
-	const h = Math.floor(diff / 1000 / 60 / 60) % 24;
-	const m = Math.floor(diff / 1000 / 60) % 60;
-	const s = Math.floor(diff / 1000) % 60;
-
-	days.innerHTML = d;
-	hours.innerHTML = h < 10 ? '0' + h : h;
-	minutes.innerHTML = m < 10 ? '0' + m : m;
-	seconds.innerHTML = s < 10 ? '0' + s : s;
+  window.addEventListener("scroll", () => {
+    menu.classList.remove("fa-times");
+    navbar.classList.remove("active");
+  });
 }
 
-setInterval(updateCountdown, 1000);
+// Countdown to the event (only on pages that have the countdown)
+const EVENT_DATE = new Date("2024-03-26T09:00:00+05:30");
+const countdown = document.getElementById("countdown");
 
+if (countdown) {
+  const days = document.getElementById("days");
+  const hours = document.getElementById("hours");
+  const minutes = document.getElementById("minutes");
+  const seconds = document.getElementById("seconds");
+  const endedMessage = document.getElementById("countdown-ended");
+  const registerBtn = document.getElementById("register-btn");
+  const pad = (n) => String(n).padStart(2, "0");
+  let timer;
 
+  const updateCountdown = () => {
+    const diff = EVENT_DATE - new Date();
 
-function navigateAndScroll(selector) {
-  window.location.href = 'index.html';
-  setTimeout(function() {
-            var element = document.querySelector(selector);
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
-  }, 500); // Adjust the delay as needed
+    if (diff <= 0) {
+      countdown.hidden = true;
+      if (endedMessage) endedMessage.hidden = false;
+      if (registerBtn) registerBtn.hidden = true;
+      clearInterval(timer);
+      return;
+    }
+
+    days.textContent = Math.floor(diff / 86400000);
+    hours.textContent = pad(Math.floor(diff / 3600000) % 24);
+    minutes.textContent = pad(Math.floor(diff / 60000) % 60);
+    seconds.textContent = pad(Math.floor(diff / 1000) % 60);
+  };
+
+  updateCountdown();
+  timer = setInterval(updateCountdown, 1000);
 }

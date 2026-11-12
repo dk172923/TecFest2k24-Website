@@ -2,15 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TecFest2k24</title>
-
-    <!--swiper css-->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TecFest2k24 | Tagore Engineering College</title>
+    <meta name="description" content="TecFest2k24 - the CSE department symposium at Tagore Engineering College, Chennai, held on March 26, 2024." />
 
     <!--font awesome-->
     <link
@@ -19,23 +13,20 @@
     />
 
     <!--css file-->
+    <link rel="icon" href="images/logo.jpg" type="image/jpeg" />
     <link rel="stylesheet" href="styles.css" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
 
   </head>
   <body>
     <!-- header section starts  -->
     <header class="header">
-      <a href="#" class="logo"><span>T</span>ec<span>F</span>est2k24</a>
+      <a href="#home" class="logo"><span>T</span>ec<span>F</span>est2k24</a>
 
       <nav class="navbar">
         <a href="#home">home</a>
         <a href="#about">about</a>
         <a href="#event">event</a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdkbm4tqbG3We_A2HwPkT9P60iT2XlB0VdF_eknKfRHAxiK9A/viewform">register</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdkbm4tqbG3We_A2HwPkT9P60iT2XlB0VdF_eknKfRHAxiK9A/viewform" target="_blank" rel="noopener">register</a>
         <a href="#footer">contact</a>
       </nav>
 
@@ -71,19 +62,20 @@
         </div>
       
        </div>
+       <p id="countdown-ended" class="countdown-ended" hidden>TecFest2k24 was held on March 26, 2024. Thank you to everyone who took part!</p>
        <br>
-       <a href="https://docs.google.com/forms/d/e/1FAIpQLSdkbm4tqbG3We_A2HwPkT9P60iT2XlB0VdF_eknKfRHAxiK9A/viewform" class="btn flicker" target="_blank" >Register Here</a>
+       <a href="https://docs.google.com/forms/d/e/1FAIpQLSdkbm4tqbG3We_A2HwPkT9P60iT2XlB0VdF_eknKfRHAxiK9A/viewform" class="btn flicker" id="register-btn" target="_blank" rel="noopener">Register Here</a>
 
       </section>
 
     <!-- about section starts  -->
     <section class="about" id="about">
-      <h1 class="heading" ><span style="font-family: 'Protest Revolution', sans-serif;">about</span> us</h1>
+      <h1 class="heading"><span>about</span> us</h1>
 
       <div class="row">
         <div class="image">
-          <video controls autoplay loop class="video" >
-              <source src="./videos/sympo video .mp4" type="video/mp4">
+          <video controls muted playsinline loop preload="metadata" poster="./images/video-poster.jpg" class="video">
+              <source src="./videos/symposium.mp4" type="video/mp4">
               Your browser does not support the video tag.
           </video>
       </div>
@@ -107,7 +99,7 @@
       <div class="box-container">
         <a href="./code-clash.html">
           <div class="box">
-            <img src="./images/code clash.jpg" alt="coding event image">
+            <img src="./images/code-clash.jpg" alt="coding event image">
             <h3><span>Code Clash</span></h3>
             <p>
               Welcome to Code Clash, where individual coding prowess shines! Dive into an exhilarating solo challenge as you navigate through coding puzzles. 
@@ -119,7 +111,7 @@
 
         <a href="./paper-presentation.html">
         <div class="box">
-          <img src="./images/paper present 2.jpeg" alt="paper presentation pic">
+          <img src="./images/paper-presentation.jpg" alt="paper presentation pic">
           <h3><span>Paper Presentation</span></h3>
           <p>
             Embark on the journey of paper presentations, where knowledge shines bright! Delve into your research, sharing its purpose, methodology, and exciting findings with clarity. 
@@ -129,8 +121,8 @@
       </div>
       <br><br><br><br><br>
       <div class="box-container">
-        <a href="./quizzy-quirks.html"><div class="box">
-          <img src="./images/quiz 1.png" alt="quiz picture">
+        <a href="./tech-quiz-trivia.html"><div class="box">
+          <img src="./images/tech-quiz-trivia.webp" alt="quiz picture">
           <h3><span>Tech Quiz Trivia</span></h3>
           <p>
             Welcome to Tech Quest Trivia, where students face off in an electrifying quiz competition!
@@ -140,7 +132,7 @@
 
         <a href="./web-blitz.html">
         <div class="box">
-          <img src="./images/web blitz 1.jpg" alt="web design pic">
+          <img src="./images/web-blitz.jpg" alt="web design pic">
           <h3><span>Web Blitz</span></h3>
           <p>
             Get ready for the excitement of Web Blitz, the ultimate web design competition! Witness peers' coding and design skills in an electrifying showdown. 
@@ -151,26 +143,26 @@
     </section>
 
     <section class="nevent">
-      <h1 class="heading"><span>non-technical events</h1></span>
+      <h1 class="heading"><span>non-technical events</span></h1>
       <div class="box-container">
         <a href="./treasure-hunt.html"><div class="box">
-          <img src="./images/treasure hunt.jpg" alt="treasure hunt pic">
+          <img src="./images/treasure-hunt.jpg" alt="treasure hunt pic">
           <h3><span>treasure hunt</span></h3>
           <p>Join the exhilarating Treasure Hunt at our college event! Navigate through clues and obstacles, uncovering hidden treasures. 
             Test your wit and teamwork in this thrilling quest for glory. 
             Gather your friends and embark on an unforgettable adventure!</p>
         </div></a>
 
-        <a href="./crichase-carnival.html"><div class="box">
-          <img src="./images/cricket.jpg" alt="box cricket pic">
+        <a href="./crickchase-carnival.html"><div class="box">
+          <img src="./images/crickchase-carnival.jpg" alt="box cricket pic">
           <h3><span>crickchase carnival</span></h3>
-          <p>Experience the adrenaline of CrickChase Carnival, our Box Cricket Extravaganza! Form your team of three and dive into an exhilarating cricket adventure. 
+          <p>Experience the adrenaline of CrickChase Carnival, our Box Cricket Extravaganza! Form your team of four and dive into an exhilarating cricket adventure. 
             With limited space and fast-paced action, get ready for a thrilling experience like no other. 
             Get ready to chase!</p>
         </div></a>
         
         <a href="./connections.html"><div class="box">
-          <img src="./images/connection.jpg" alt="connections pic">
+          <img src="./images/connections.jpg" alt="connections pic">
           <h3><span>Connection club</span></h3>
           <p>
             Welcome to Connections Game! Uncover Hidden Links, Sharpening Your Wit and Strategy. 
@@ -184,17 +176,16 @@
 
 
     <!--Location -->
-    <center><h1 class="heading"><span>Location</span></h1>
+    <h1 class="heading location-heading"><span>Location</span></h1>
     <section class="location" id="location">    
         <div class="location_container">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.7144463506042!2d80.12870137491639!3d12.861711087443688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5258e5630a08cf%3A0x64f52d4234506853!2sTagore%20Engineering%20College!5e0!3m2!1sen!2sin!4v1710308589573!5m2!1sen!2sin" width="450" height="400" style="border:10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.7144463506042!2d80.12870137491639!3d12.861711087443688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5258e5630a08cf%3A0x64f52d4234506853!2sTagore%20Engineering%20College!5e0!3m2!1sen!2sin!4v1710308589573!5m2!1sen!2sin" width="450" height="400" title="Map to Tagore Engineering College" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           <div class="content">
             <h1>tagore engineering college</h1>
             <p>Rathinamangalam, Chennai-600127</p>
           </div>
         </div>
-    </section>  
-  </center>
+    </section>
 
 
     <!-- footer section starts  -->
@@ -202,17 +193,17 @@
       <div class="box-container"> 
         <div class="box">
           <h3>contact info</h3>
-          <a href="#footer"> <i class="fas fa-phone"></i>TharunRaj - 9952117101</a>
-          <a href="#footer"> <i class="fas fa-phone"></i>Dayanithi - 7338762412 </a>
-          <a href="mailTo:tecfestcse24@gmail.com"> <i class="fas fa-envelope"></i> tecfestcse24@gmail.com </a>
-          <a href="https://maps.app.goo.gl/8fwWHgHfwxKurvk59">
+          <a href="tel:+919952117101"> <i class="fas fa-phone"></i> TharunRaj - 99521 17101</a>
+          <a href="tel:+917338762412"> <i class="fas fa-phone"></i> Dayanithi - 73387 62412</a>
+          <a href="mailto:tecfestcse24@gmail.com"> <i class="fas fa-envelope"></i> tecfestcse24@gmail.com </a>
+          <a href="https://maps.app.goo.gl/8fwWHgHfwxKurvk59" target="_blank" rel="noopener">
             <i class="fas fa-map-marker-alt"></i> Rathinamangalam, Chennai-600127
           </a>
         </div>
 
         <div class="box">
           <h3>follow us</h3>
-          <a href="https://www.instagram.com/tecfestcse_2024/"> <i class="fab fa-instagram"></i> instagram </a>
+          <a href="https://www.instagram.com/tecfestcse_2024/" target="_blank" rel="noopener"> <i class="fab fa-instagram"></i> instagram </a>
         </div>
       </div>
 
@@ -220,16 +211,6 @@
         Created by <span>TecFest2k24</span> team
       </div>
     </section>
-
-    <!-- theme toggler  -->
-    <div class="theme-toggler">
-      <div class="toggle-btn">
-        <i class="fas fa-cog"></i>
-      </div>
-    </div>
-
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
     <!--JS file-->
     <script src="app.js"></script>

@@ -2,15 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TecFest2k24</title>
-
-    <!--swiper css-->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Clash | TecFest2k24</title>
 
     <!--font awesome-->
     <link
@@ -20,6 +13,7 @@
 
     <!--css file-->
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/logo.jpg" type="image/jpeg" />
     <link rel="stylesheet" href="styles.css"/>
 
   </head>
@@ -29,10 +23,10 @@
       <a href="./index.html" class="logo"><span>T</span>ec<span>F</span>est2k24</a>
 
       <nav class="navbar">
-        <a href="index.html#home" onclick="navigateAndScroll('#home')">home</a>
-        <a href="index.html#about" onclick="navigateAndScroll('#about')">about</a>
-        <a href="index.html#event" onclick="navigateAndScroll('#event')">event</a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdkbm4tqbG3We_A2HwPkT9P60iT2XlB0VdF_eknKfRHAxiK9A/viewform">register</a>
+        <a href="index.html#home">home</a>
+        <a href="index.html#about">about</a>
+        <a href="index.html#event">event</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdkbm4tqbG3We_A2HwPkT9P60iT2XlB0VdF_eknKfRHAxiK9A/viewform" target="_blank" rel="noopener">register</a>
         <a href="index.html#footer">contact</a>
     </nav>
     
@@ -45,7 +39,7 @@
     <div class="event-container">
         <!-- Image on the left side -->
         <div class="image-container">
-            <img src="./images/code clash.jpg" alt="CodeClash Image">
+            <img src="./images/code-clash.jpg" alt="CodeClash Image">
         </div>
         <!-- Content on the right side -->
         <div class="content-container">
@@ -66,7 +60,7 @@
             </ul>
             <h3 class="coordinators-heading">Student Coordinator:</h3>
             <p class="coordinators">
-                Dinesh - 97107 94195
+                <a href="tel:+919710794195">Dinesh - 97107 94195</a>
             </p>
             <div class="whatsapp-group">
                 <a href="https://chat.whatsapp.com/CvD2LOkV81M9YpNgMq3heX" target="_blank" class="whatsapp-group-link">
@@ -74,7 +68,7 @@
                 </a>
             </div>
             
-              <p class="additional-info">For more details refer <a href="https://drive.google.com/file/d/1-UNNcLAiTVrGHXy7k-CZmbGy0MqD4sMa/view?usp=drivesdk"><span style="font-family: 'Poppins', sans-serif;">RULES DOCUMENT</span></a></p>
+              <p class="additional-info">For more details refer <a target="_blank" rel="noopener" href="https://drive.google.com/file/d/1-UNNcLAiTVrGHXy7k-CZmbGy0MqD4sMa/view?usp=drivesdk"><span style="font-family: 'Poppins', sans-serif;">RULES DOCUMENT</span></a></p>
             
         </div>
     </div>
@@ -85,45 +79,25 @@
       <div class="box-container"> 
         <div class="box">
           <h3>contact info</h3>
-          <a href="#footer"> <i class="fas fa-phone"></i>TharunRaj - 9952117101</a>
-          <a href="#footer"> <i class="fas fa-phone"></i>Dayanithi - 7338762412 </a>
-          <a href="mailTo:tecfestcse24@gmail.com"> <i class="fas fa-envelope"></i> tecfestcse24@gmail.com </a>
-          <a href="https://maps.app.goo.gl/8fwWHgHfwxKurvk59">
+          <a href="tel:+919952117101"> <i class="fas fa-phone"></i> TharunRaj - 99521 17101</a>
+          <a href="tel:+917338762412"> <i class="fas fa-phone"></i> Dayanithi - 73387 62412</a>
+          <a href="mailto:tecfestcse24@gmail.com"> <i class="fas fa-envelope"></i> tecfestcse24@gmail.com </a>
+          <a href="https://maps.app.goo.gl/8fwWHgHfwxKurvk59" target="_blank" rel="noopener">
             <i class="fas fa-map-marker-alt"></i> Rathinamangalam, Chennai-600127
           </a>
         </div>
 
         <div class="box">
           <h3>follow us</h3>
-          <a href="https://www.instagram.com/tecfestcse_2024/"> <i class="fab fa-instagram"></i> instagram </a>
+          <a href="https://www.instagram.com/tecfestcse_2024/" target="_blank" rel="noopener"> <i class="fab fa-instagram"></i> instagram </a>
         </div>
       </div>
 
       <div class="credit">
         Created by <span>TecFest2k24</span> team
       </div>
-    </section>
-
-    <!-- theme toggler  -->
-    <div class="theme-toggler">
-      <div class="toggle-btn">
-        <i class="fas fa-cog"></i>
-      </div>
-   
-
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-    <!--JS file-->
+    </section><!--JS file-->
     <script src="app.js"></script>
-    <script>
-      function navigateAndScroll(selector) {
-          var element = document.querySelector(selector);
-          if (element) {
-              element.scrollIntoView({ behavior: 'smooth' });
-          }
-      }
-  </script>
   
   </body>
 </html>
